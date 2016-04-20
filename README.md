@@ -46,6 +46,8 @@ Features
 Usage
 -----
 
+The product selection page is http://localhost:3000/product-selection .
+
 Before delving into the descriptions of each available npm script, here's a brief summary of the three which will most likely be your bread and butter:
 
 * Doing live development? Use `npm start` to spin up the dev server.
