@@ -47,15 +47,15 @@ describe('(Redux) Products', () => {
 
     it('should return the previous state if an action was not matched.', () => {
       let state = reducer(undefined, {})
-      expect(state).to.equal(initialState)
+      expect(state).to.deep.equal(initialState)
       state = reducer(state, {type: '@@@@@@@'})
-      expect(state).to.equal(initialState)
+      expect(state).to.deep.equal(initialState)
     })
 
     it('should not mutate the state', () => {
       const state = reducer(undefined, {})
       reducer(state, setProductsList(fetchedProduct))
-      expect(state).to.equal(initialState)
+      expect(state).to.deep.equal(initialState)
     })
   })
 
