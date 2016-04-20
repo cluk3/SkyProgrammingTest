@@ -1,0 +1,24 @@
+.header,
+.footer {
+  border: 1px solid;
+  height: 10vh;
+  min-height: 80px;
+}
+
+.header {
+  padding-left: 20px;
+}
+
+.footer {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.pageContent {
+  min-height: 80vh;
+  margin-top: 20px;
+}
+
+.pageContainer {
+  min-height: 100vh;
+}
