@@ -41,6 +41,7 @@ Features
   * [babel-plugin-transform-react-remove-prop-types](https://github.com/oliviertassinari/babel-plugin-transform-react-remove-prop-types) remove `PropTypes`
 * [ESLint](http://eslint.org)
   * Uses [Standard Style](https://github.com/feross/standard) by default, but you're welcome to change this.
+* [React-Redux-Starter-Kit](https://github.com/davezuko/react-redux-starter-kit)
 
 Usage
 -----
