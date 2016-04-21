@@ -3,15 +3,24 @@ Sky programming test
 
 Table of Contents
 -----------------
+1. [Installation](#installation)
 1. [Requirements](#requirements)
 1. [Features](#features)
 1. [Usage](#usage)
 
+Installation
+------------
+
+Write in your shell:
+`git clone https://github.com/cluk3/SkyProgrammingTest`
+`cd SkyProgrammingTest`
+`npm install`
+
 Requirements
 ------------
 
-* node `^4.2.0`
-* npm `^3.0.0`
+* node `^4.4.3`
+* npm `^3.8.6`
 * mongodb `^2.6.11`
 
 Features
@@ -46,7 +55,7 @@ Features
 Usage
 -----
 
-The product selection page is http://localhost:3000/product-selection .
+The product selection page is at http://localhost:3000/product-selection .
 
 Before delving into the descriptions of each available npm script, here's a brief summary of the three which will most likely be your bread and butter:
 
