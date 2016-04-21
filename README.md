@@ -16,6 +16,8 @@ Write in your shell:
 `cd SkyProgrammingTest`
 `npm install`
 
+There is a database seeding script running after `npm install`, if it fails try to run `npm run seed` again. If it fails again try to check if mongod is running on your machine.
+
 Requirements
 ------------
 
