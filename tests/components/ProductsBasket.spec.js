@@ -6,12 +6,14 @@ const products = [
   {
     category: 'Sports',
     name: 'Arsenal TV',
-    selected: true
+    selected: true,
+    selectedAt: Date.now()
   },
   {
     category: 'News',
     name: 'Sky News',
-    selected: true
+    selected: true,
+    selectedAt: Date.now() + 10000
   },
 ]
 const submitHandler = sinon.spy()
@@ -33,5 +35,8 @@ describe('(Component) ProductsBasket', () => {
   it('should call submitHandler when button in clicked', () => {
     wrapper.find('button').simulate('click')
     expect(submitHandler.calledOnce).to.be.true
+  })
+  it('should put last selected product at bottom', () => {
+    expect(wrapper.find('li').last().text()).to.equal('Sky News')
   })
 })

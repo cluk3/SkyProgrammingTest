@@ -85,7 +85,8 @@ export default function (state = initialState, action) {
         return {
           category: product.category,
           name: product.product,
-          selected: false
+          selected: false,
+          selectedAt: Date.now()
         }
       })
     case TOGGLE_PRODUCT_SELECTION:
@@ -93,7 +94,8 @@ export default function (state = initialState, action) {
         if (product.name === action.productName) {
           return {
             ...product,
-            selected: !product.selected
+            selected: !product.selected,
+            selectedAt: Date.now()
           }
         }
         return product

@@ -8,7 +8,7 @@ const ProductsList = ({ products, title, toggleSelectionHandler }) => {
       <li key={i}>
         <div className='checkbox'>
           <label>
-            <input onChange={onChangeHandler(product.name)} type='checkbox' />
+            <input checked={product.selected} onChange={onChangeHandler(product.name)} type='checkbox' />
             {product.name}
           </label>
         </div>

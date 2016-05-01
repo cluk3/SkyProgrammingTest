@@ -12,7 +12,8 @@ const products = [
   {
     category: 'Sports',
     name: 'Arsenal TV',
-    selected: false
+    selected: false,
+    selectedAt: 0
   }
 ]
 
@@ -130,9 +131,16 @@ describe('(Redux) Products', () => {
   })
 
   describe('(Action Handler) SET_PRODUCTS_LIST', function () {
-    it('should set the produc list', () => {
+    it('should set the product list', () => {
       let state = reducer(undefined, setProductsList(fetchedProduct))
-      expect(state).to.deep.equal(products)
+      expect(state
+        .map((product) => ({
+            ...product,
+            selectedAt: 0
+          })
+        )
+      ).to.deep.equal(products)
+      expect(state[0].selectedAt).to.exist
     })
   })
 })

@@ -2,15 +2,17 @@ import React, { PropTypes} from 'react'
 import { basketContainer, submitButton } from './ProductsBasket.css'
 
 const ProductsBasket = ({ products, submitHandler }) => {
-  const Products = products.map((product, i) => {
-    return (
-      <li key={i}>{product.name}</li>
-    )
-  })
+  const Products = products
+    .sort((a, b) => a.selectedAt - b.selectedAt)
+    .map((product, i) => {
+      return (
+        <li key={i}>{product.name}</li>
+      )
+    })
   return (
     <div className={basketContainer}>
       <h2>Basket</h2>
-      <ul>
+      <ul id='basket'>
         {Products}
       </ul>
       <button
